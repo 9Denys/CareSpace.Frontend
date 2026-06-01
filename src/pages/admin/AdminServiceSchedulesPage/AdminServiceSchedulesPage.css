@@ -1,0 +1,274 @@
+.admin-service-schedules-page {
+    min-height: 100vh;
+    display: flex;
+    background-color: #F7F7F4;
+    color: #2F2F2F;
+}
+
+.admin-service-schedules-page__content {
+    flex: 1;
+    min-width: 0;
+}
+
+.admin-service-schedules-page__topbar {
+    height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding: 0 40px;
+
+    background-color: #FFFFFF;
+
+    border-bottom: 1px solid #E1E1DC;
+}
+
+.admin-service-schedules-page__home-button {
+    height: 40px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 18px;
+
+    background-color: #FFFFFF;
+    color: #2F2F2F;
+
+    border: 1px solid #DCDCD6;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.admin-service-schedules-page__home-button:hover {
+    background-color: #EFE8CF;
+}
+
+.admin-service-schedules-page__main {
+    padding: 32px;
+}
+
+.admin-service-schedules-page__header {
+    margin-bottom: 32px;
+}
+
+.admin-service-schedules-page__title {
+    margin: 0 0 8px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #2F2F2F;
+}
+
+.admin-service-schedules-page__subtitle {
+    margin: 0;
+    font-size: 16px;
+    color: #5F7185;
+}
+
+.admin-service-schedules-page__grid {
+    display: grid;
+    grid-template-columns: minmax(320px, 620px) minmax(320px, 1fr);
+    gap: 24px;
+    align-items: start;
+}
+
+.admin-service-schedules-page__form-card,
+.admin-service-schedules-page__list-card {
+    padding: 24px;
+    border: 1px solid #E2DED5;
+    border-radius: 16px;
+    background-color: #FFFFFF;
+    box-shadow: 0 8px 24px rgba(47, 47, 47, 0.05);
+}
+
+.admin-service-schedules-page__card-title {
+    margin: 0 0 24px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2F2F2F;
+}
+
+.admin-service-schedules-page__field {
+    margin-bottom: 24px;
+}
+
+.admin-service-schedules-page__label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2F2F2F;
+}
+
+.admin-service-schedules-page__select {
+    width: 100%;
+    height: 44px;
+    padding: 0 14px;
+    border: 1px solid #DDD8CE;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    color: #516173;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+.admin-service-schedules-page__select:focus {
+    border-color: #6F8588;
+    box-shadow: 0 0 0 3px rgba(111, 133, 136, 0.14);
+}
+
+.admin-service-schedules-page__submit {
+    width: 100%;
+    height: 48px;
+    margin-top: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: #6F8588;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.admin-service-schedules-page__submit:hover {
+    background-color: #5F7376;
+}
+
+.admin-service-schedules-page__submit:disabled {
+    background-color: #B8C4C6;
+    cursor: not-allowed;
+}
+
+.admin-service-schedules-page__empty {
+    padding: 32px;
+    border-radius: 14px;
+    background-color: #F7F7F4;
+    color: #6B7280;
+    text-align: center;
+    font-size: 14px;
+}
+
+.admin-service-schedules-page__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    max-height: 520px;
+    overflow-y: auto;
+
+    padding-right: 6px;
+}
+
+.admin-service-schedules-page__schedule {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px;
+    border: 1px solid #E6E1D8;
+    border-radius: 14px;
+    background-color: #F7F7F4;
+}
+
+.admin-service-schedules-page__schedule-title {
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2F2F2F;
+}
+
+.admin-service-schedules-page__schedule-text {
+    margin: 0 0 6px;
+    font-size: 14px;
+    color: #5F7185;
+}
+
+.admin-service-schedules-page__schedule-time {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #6F8588;
+}
+
+.admin-service-schedules-page__delete {
+    padding: 9px 14px;
+    border: none;
+    border-radius: 10px;
+    background-color: #EFE8CF;
+    color: #2F2F2F;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s ease;
+    white-space: nowrap;
+}
+
+.admin-service-schedules-page__delete:hover {
+    background-color: #E3D7AE;
+}
+
+@media (max-width: 1100px) {
+    .admin-service-schedules-page__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-service-schedules-page {
+        flex-direction: column;
+    }
+
+    .admin-service-schedules-page__topbar {
+        height: auto;
+        padding: 16px;
+    }
+
+    .admin-service-schedules-page__main {
+        padding: 24px 16px;
+    }
+
+    .admin-service-schedules-page__title {
+        font-size: 28px;
+    }
+
+    .admin-service-schedules-page__form-card,
+    .admin-service-schedules-page__list-card {
+        padding: 20px;
+    }
+
+    .admin-service-schedules-page__schedule {
+        flex-direction: column;
+    }
+
+    .admin-service-schedules-page__delete {
+        width: 100%;
+    }
+}
+
+.admin-service-schedules-page__empty--error {
+    color: #c0392b;
+}
+
+.admin-service-schedules-page__list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.admin-service-schedules-page__list::-webkit-scrollbar-thumb {
+    background-color: #D6D1C7;
+    border-radius: 999px;
+}
+
+.admin-service-schedules-page__list::-webkit-scrollbar-track {
+    background-color: transparent;
+}

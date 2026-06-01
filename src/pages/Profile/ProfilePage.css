@@ -1,0 +1,475 @@
+.profile-page {
+    min-height: 100vh;
+    background-color: #F3F3F1;
+    color: #2F2F2F;
+}
+
+.profile-page__main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 56px 24px 120px;
+}
+
+.profile-page__title {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 48px;
+}
+
+.profile-page__user-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+
+    padding: 40px 48px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #E1E1DC;
+    border-radius: 16px;
+
+    margin-bottom: 48px;
+}
+
+.profile-page__user-info {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.profile-page__avatar {
+    width: 88px;
+    height: 88px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #EFE8CF;
+    border-radius: 50%;
+}
+
+.profile-page__avatar-icon {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+
+.profile-page__user-name {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.profile-page__user-text {
+    font-size: 15px;
+    color: #5F7185;
+    margin-bottom: 10px;
+}
+
+.profile-page__user-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.profile-page__edit-button,
+.profile-page__delete-button,
+.profile-page__cancel-button {
+    height: 42px;
+    padding: 0 18px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.profile-page__edit-button {
+    background-color: #D7E3E5;
+    color: #2F2F2F;
+    border: none;
+}
+
+.profile-page__edit-button:hover {
+    background-color: #6F8588;
+    color: #FFFFFF;
+}
+
+.profile-page__delete-button {
+    background-color: #FFFFFF;
+    color: #D10000;
+    border: 1px solid #DCDCD6;
+}
+
+.profile-page__delete-button:hover {
+    background-color: #FFF1F1;
+}
+
+.profile-page__section-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.profile-page__appointments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    max-height: 620px;
+    overflow-y: auto;
+
+    padding-right: 6px;
+}
+
+.profile-page__appointment-card {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+
+    padding: 32px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #E1E1DC;
+    border-radius: 16px;
+}
+
+.profile-page__appointment-info {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.profile-page__appointment-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.profile-page__status {
+    display: inline-flex;
+    width: fit-content;
+
+    padding: 6px 12px;
+
+    background-color: #ECEDE8;
+    color: #6F8588;
+
+    border-radius: 999px;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.profile-page__appointment-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.profile-page__detail-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #5F7185;
+    font-size: 15px;
+}
+
+.profile-page__detail-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.profile-page__cancel-button {
+    align-self: center;
+
+    background-color: #EFE8CF;
+    color: #2F2F2F;
+    border: none;
+}
+
+.profile-page__cancel-button:hover {
+    background-color: #E4D9B8;
+}
+
+.profile-page__empty {
+    padding: 32px;
+
+    background-color: #FFFFFF;
+    border: 1px solid #E1E1DC;
+    border-radius: 16px;
+
+    color: #5F7185;
+    font-size: 16px;
+}
+
+.profile-modal__overlay,
+.delete-modal__overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 300;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 24px;
+
+    background-color: rgba(47, 47, 47, 0.45);
+}
+
+.profile-modal__content {
+    width: 100%;
+    max-width: 560px;
+
+    padding: 32px;
+
+    background-color: #F7F7F4;
+
+    border-radius: 16px;
+
+    box-shadow: 0 24px 64px rgba(47, 47, 47, 0.18);
+}
+
+.profile-modal__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 28px;
+}
+
+.profile-modal__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2F2F2F;
+}
+
+.profile-modal__close {
+    width: 34px;
+    height: 34px;
+
+    border: none;
+    background-color: transparent;
+
+    font-size: 24px;
+    color: #2F2F2F;
+
+    cursor: pointer;
+}
+
+.profile-modal__field {
+    margin-bottom: 20px;
+}
+
+.profile-modal__label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    color: #2F2F2F;
+}
+
+.profile-modal__input {
+    width: 100%;
+    height: 52px;
+
+    padding: 0 16px;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid #DCDCD6;
+    border-radius: 10px;
+
+    font-size: 16px;
+    color: #2F2F2F;
+
+    outline: none;
+}
+
+.profile-modal__input:focus {
+    border-color: #6F8588;
+    box-shadow: 0 0 0 3px rgba(111, 133, 136, 0.18);
+}
+
+.profile-modal__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+
+    margin-top: 28px;
+}
+
+.profile-modal__cancel,
+.profile-modal__save {
+    height: 42px;
+
+    padding: 0 20px;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.profile-modal__cancel {
+    background-color: #FFFFFF;
+    color: #2F2F2F;
+
+    border: 1px solid #DCDCD6;
+}
+
+.profile-modal__cancel:hover {
+    background-color: #EFE8CF;
+}
+
+.profile-modal__save {
+    background-color: #6F8588;
+    color: #FFFFFF;
+
+    border: none;
+}
+
+.profile-modal__save:hover {
+    background-color: #5F7376;
+}
+
+.delete-modal__content {
+    width: 100%;
+    max-width: 520px;
+
+    padding: 32px;
+
+    background-color: #FFFFFF;
+
+    border-radius: 16px;
+
+    box-shadow: 0 24px 64px rgba(47, 47, 47, 0.18);
+}
+
+.delete-modal__title {
+    margin-bottom: 14px;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    color: #2F2F2F;
+}
+
+.delete-modal__text {
+    margin-bottom: 32px;
+
+    font-size: 17px;
+    line-height: 1.6;
+
+    color: #5F7185;
+}
+
+.delete-modal__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+}
+
+.delete-modal__cancel,
+.delete-modal__delete {
+    height: 46px;
+
+    padding: 0 22px;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.delete-modal__cancel {
+    background-color: #FFFFFF;
+
+    border: 1px solid #DCDCD6;
+
+    color: #2F2F2F;
+}
+
+.delete-modal__cancel:hover {
+    background-color: #F4F4F1;
+}
+
+.delete-modal__delete {
+    background-color: #FF0000;
+
+    border: none;
+
+    color: #FFFFFF;
+}
+
+.delete-modal__delete:hover {
+    background-color: #D90000;
+}
+
+@media (max-width: 800px) {
+    .profile-page__user-card,
+    .profile-page__appointment-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .profile-page__user-actions {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .profile-page__edit-button,
+    .profile-page__delete-button,
+    .profile-page__cancel-button {
+        width: 100%;
+    }
+
+    .profile-modal__actions,
+    .delete-modal__actions {
+        flex-direction: column;
+    }
+
+    .profile-modal__cancel,
+    .profile-modal__save,
+    .delete-modal__cancel,
+    .delete-modal__delete {
+        width: 100%;
+    }
+}
+
+.profile-page__empty--error {
+    color: #c0392b;
+}
+
+.profile-page__appointments-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.profile-page__appointments-list::-webkit-scrollbar-thumb {
+    background-color: #D6D1C7;
+    border-radius: 999px;
+}
+
+.profile-page__appointments-list::-webkit-scrollbar-track {
+    background-color: transparent;
+}

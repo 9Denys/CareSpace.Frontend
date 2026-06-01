@@ -1,0 +1,130 @@
+.booking-success-page {
+    min-height: 100vh;
+    background-color: #F3F3F1;
+    color: #2F2F2F;
+}
+
+.booking-success-page__main {
+    min-height: 430px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 72px 24px;
+}
+
+.booking-success-page__card {
+    width: 100%;
+    max-width: 440px;
+
+    padding: 40px 36px;
+
+    background-color: #FFFFFF;
+
+    border: 1px solid #E1E1DC;
+    border-radius: 16px;
+
+    text-align: center;
+
+    box-shadow: 0 8px 24px rgba(47, 47, 47, 0.04);
+}
+
+.booking-success-page__icon-box {
+    width: 64px;
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 24px;
+
+    background-color: #EFE8CF;
+
+    border-radius: 50%;
+}
+
+.booking-success-page__icon {
+    width: 34px;
+    height: 34px;
+    object-fit: contain;
+}
+
+.booking-success-page__title {
+    font-size: 24px;
+    font-weight: 700;
+
+    margin-bottom: 16px;
+}
+
+.booking-success-page__text {
+    max-width: 320px;
+
+    margin: 0 auto 28px;
+
+    font-size: 16px;
+    line-height: 1.5;
+
+    color: #5F7185;
+}
+
+.booking-success-page__actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.booking-success-page__button {
+    min-width: 112px;
+    height: 40px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 18px;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.booking-success-page__button--primary {
+    background-color: #6F8588;
+    color: #FFFFFF;
+}
+
+.booking-success-page__button--primary:hover {
+    background-color: #5F7376;
+}
+
+.booking-success-page__button--secondary {
+    background-color: #FFFFFF;
+    color: #2F2F2F;
+
+    border: 1px solid #DCDCD6;
+}
+
+.booking-success-page__button--secondary:hover {
+    background-color: #EFE8CF;
+}
+
+@media (max-width: 500px) {
+    .booking-success-page__card {
+        padding: 32px 24px;
+    }
+
+    .booking-success-page__actions {
+        flex-direction: column;
+    }
+
+    .booking-success-page__button {
+        width: 100%;
+    }
+}

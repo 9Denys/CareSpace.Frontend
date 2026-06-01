@@ -1,0 +1,395 @@
+.admin-categories-page {
+    min-height: 100vh;
+    display: flex;
+    background-color: #F7F7F4;
+    color: #2F2F2F;
+}
+
+.admin-categories-page__content {
+    flex: 1;
+    min-width: 0;
+}
+
+.admin-categories-page__topbar {
+    height: 76px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 40px;
+    background-color: #FFFFFF;
+    border-bottom: 1px solid #E1E1DC;
+}
+
+
+.admin-categories-page__home-button {
+    height: 40px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0 18px;
+
+    background-color: #FFFFFF;
+    color: #2F2F2F;
+
+    border: 1px solid #DCDCD6;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+}
+
+
+.admin-categories-page__main {
+    padding: 32px;
+}
+
+.admin-categories-page__header {
+    margin-bottom: 32px;
+}
+
+.admin-categories-page__title {
+    margin: 0 0 8px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.admin-categories-page__subtitle {
+    margin: 0;
+    font-size: 16px;
+    color: #5F7185;
+}
+
+.admin-categories-page__card {
+    max-width: 1080px;
+    padding: 30px;
+    border: 1px solid #E2DED5;
+    border-radius: 16px;
+    background-color: #FFFFFF;
+    box-shadow: 0 8px 24px rgba(47, 47, 47, 0.05);
+}
+
+.admin-categories-page__actions {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 30px;
+}
+
+.admin-categories-page__search {
+    flex: 1;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 16px;
+    border: 1px solid #DDD8CE;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+}
+
+.admin-categories-page__search-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    opacity: 0.7;
+}
+
+.admin-categories-page__search-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #2F2F2F;
+    font-size: 14px;
+}
+
+.admin-categories-page__search-input::placeholder {
+    color: #607086;
+}
+
+.admin-categories-page__add-button {
+    height: 48px;
+    padding: 0 24px;
+    border: none;
+    border-radius: 10px;
+    background-color: #6F8588;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.admin-categories-page__add-button:hover {
+    background-color: #5F7376;
+}
+
+.admin-categories-page__table-wrapper {
+    overflow-x: auto;
+    overflow-y: auto;
+
+    max-height: 320px;
+
+    border: 1px solid #E2DED5;
+    border-radius: 14px;
+
+    padding-right: 6px;
+}
+
+.admin-categories-page__table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 780px;
+}
+
+.admin-categories-page__table th {
+    padding: 14px 10px;
+    background-color: #F7F7F4;
+    color: #2F2F2F;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.admin-categories-page__table td {
+    padding: 16px 10px;
+    border-top: 1px solid #E2DED5;
+    color: #4F6175;
+    font-size: 14px;
+}
+
+.admin-categories-page__table td:first-child {
+    color: #2F2F2F;
+    font-weight: 500;
+}
+
+.admin-categories-page__table-actions {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+
+.admin-categories-page__icon-button {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.admin-categories-page__icon-button:hover {
+    background-color: #F3F3F1;
+}
+
+.admin-categories-page__icon-button img {
+    object-fit: contain;
+    display: block;
+}
+
+.admin-categories-page__edit-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.admin-categories-page__delete-icon {
+    width: 26px;
+    height: 26px;
+    transform: scale(1.25);
+}
+
+.admin-categories-page__empty {
+    padding: 24px;
+    text-align: center;
+    color: #607086;
+    font-size: 14px;
+}
+
+.admin-categories-page__overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background-color: rgba(47, 47, 47, 0.55);
+}
+
+.admin-categories-page__modal {
+    width: 100%;
+    max-width: 480px;
+    padding: 24px;
+    border-radius: 14px;
+    background-color: #FFFFFF;
+    box-shadow: 0 18px 40px rgba(47, 47, 47, 0.25);
+}
+
+.admin-categories-page__modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}
+
+.admin-categories-page__modal-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.admin-categories-page__modal-close {
+    border: none;
+    background-color: transparent;
+    color: #6B7280;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.admin-categories-page__field {
+    margin-bottom: 20px;
+}
+
+.admin-categories-page__label {
+    display: block;
+    margin-bottom: 8px;
+    color: #2F2F2F;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.admin-categories-page__input,
+.admin-categories-page__textarea {
+    width: 100%;
+    border: 1px solid #DDD8CE;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    color: #2F2F2F;
+    font-size: 14px;
+    outline: none;
+}
+
+.admin-categories-page__input {
+    height: 48px;
+    padding: 0 14px;
+}
+
+.admin-categories-page__textarea {
+    min-height: 92px;
+    padding: 12px 14px;
+    resize: none;
+    font-family: inherit;
+}
+
+.admin-categories-page__input:focus,
+.admin-categories-page__textarea:focus {
+    border-color: #6F8588;
+    box-shadow: 0 0 0 3px rgba(111, 133, 136, 0.18);
+}
+
+.admin-categories-page__modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 4px;
+}
+
+.admin-categories-page__cancel-button,
+.admin-categories-page__save-button {
+    height: 42px;
+    padding: 0 18px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.admin-categories-page__cancel-button {
+    border: 1px solid #DDD8CE;
+    background-color: #FFFFFF;
+    color: #2F2F2F;
+}
+
+.admin-categories-page__save-button {
+    border: none;
+    background-color: #6F8588;
+    color: #FFFFFF;
+}
+
+.admin-categories-page__save-button:disabled {
+    background-color: #B8C4C6;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    .admin-categories-page {
+        flex-direction: column;
+    }
+
+    .admin-categories-page__topbar {
+        height: auto;
+        padding: 16px;
+    }
+
+    .admin-categories-page__main {
+        padding: 24px 16px;
+    }
+
+    .admin-categories-page__title {
+        font-size: 28px;
+    }
+
+    .admin-categories-page__card {
+        padding: 20px;
+    }
+
+    .admin-categories-page__actions {
+        flex-direction: column;
+    }
+
+    .admin-categories-page__add-button {
+        width: 100%;
+    }
+
+    .admin-categories-page__modal-actions {
+        flex-direction: column-reverse;
+    }
+
+    .admin-categories-page__cancel-button,
+    .admin-categories-page__save-button {
+        width: 100%;
+    }
+}
+
+.admin-categories-page__home-button {
+    text-decoration: none;
+}
+
+.admin-categories-page__home-button:hover {
+    background-color: #EFE8CF;
+}
+
+.admin-categories-page__empty--error {
+    color: #c0392b;
+}
+
+.admin-categories-page__table-wrapper::-webkit-scrollbar {
+    width: 8px;
+}
+
+.admin-categories-page__table-wrapper::-webkit-scrollbar-thumb {
+    background-color: #D6D1C7;
+    border-radius: 999px;
+}
+
+.admin-categories-page__table-wrapper::-webkit-scrollbar-track {
+    background-color: transparent;
+}

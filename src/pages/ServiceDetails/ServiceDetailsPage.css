@@ -1,0 +1,168 @@
+.service-details-page {
+    min-height: 100vh;
+    background-color: #F3F3F1;
+    color: #2F2F2F;
+}
+
+.service-details-page__main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 72px 24px 120px;
+}
+
+.service-details-page__card {
+    padding: 48px;
+    background-color: #FFFFFF;
+    border: 1px solid #E1E1DC;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(47, 47, 47, 0.04);
+}
+
+.service-details-page__icon-box {
+    width: 64px;
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #EFE8CF;
+    border-radius: 16px;
+
+    margin-bottom: 24px;
+}
+
+.service-details-page__icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.service-details-page__badge {
+    display: inline-flex;
+
+    padding: 6px 14px;
+    margin-bottom: 24px;
+
+    border-radius: 999px;
+
+    background-color: #ECEDE8;
+    color: #6F8588;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.service-details-page__title {
+    font-size: 34px;
+    line-height: 1.25;
+    font-weight: 700;
+
+    margin-bottom: 28px;
+}
+
+.service-details-page__description {
+    max-width: 720px;
+
+    font-size: 18px;
+    line-height: 1.65;
+
+    color: #4E5968;
+
+    margin-bottom: 34px;
+}
+
+.service-details-page__duration {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #5F7185;
+
+    font-size: 16px;
+}
+
+.service-details-page__small-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.service-details-page__divider {
+    width: 100%;
+    height: 1px;
+
+    margin: 36px 0 32px;
+
+    background-color: #DCDCD6;
+}
+
+.service-details-page__actions {
+    display: flex;
+    justify-content: center;
+}
+
+.service-details-page__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 136px;
+    height: 48px;
+
+    padding: 0 24px;
+
+    background-color: #6F8588;
+    color: #FFFFFF;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.service-details-page__button:hover {
+    background-color: #5F7376;
+}
+
+@media (max-width: 650px) {
+    .service-details-page__main {
+        padding: 40px 20px 80px;
+    }
+
+    .service-details-page__card {
+        padding: 32px 24px;
+    }
+
+    .service-details-page__title {
+        font-size: 28px;
+    }
+
+    .service-details-page__description {
+        font-size: 16px;
+    }
+
+    .service-details-page__button {
+        width: 100%;
+    }
+}
+
+.service-details-page__message {
+    padding: 24px;
+
+    background-color: #ffffff;
+    color: #5F7185;
+
+    border: 1px solid #E1E1DC;
+    border-radius: 16px;
+
+    font-size: 16px;
+}
+
+.service-details-page__message--error {
+    color: #c0392b;
+}
