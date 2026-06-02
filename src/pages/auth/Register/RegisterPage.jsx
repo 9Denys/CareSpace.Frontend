@@ -31,7 +31,7 @@ function RegisterPage() {
                 <form className="register-page__form" onSubmit={handleSubmit}>
                     <div className="register-page__row">
                         <div className="register-page__field">
-                            <label>Ім&apos;я</label>
+                            <label>Ім'я</label>
 
                             <input
                                 type="text"

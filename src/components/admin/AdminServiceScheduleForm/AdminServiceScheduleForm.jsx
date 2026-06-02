@@ -1,18 +1,23 @@
 import {
     getAvailableTimeSlots,
-    getSlotLabel
+    getSlotLabel,
 } from '../../../utils/serviceScheduleUtils'
 
 function AdminServiceScheduleForm({
     services,
     centres,
     timeSlots,
+    schedules,
     formData,
     isFormValid,
     onChange,
     onSubmit,
 }) {
-    const availableTimeSlots = getAvailableTimeSlots(timeSlots)
+    const availableTimeSlots = getAvailableTimeSlots(
+        timeSlots,
+        schedules,
+        formData.centreId
+    )
 
     return (
         <form
@@ -37,10 +42,7 @@ function AdminServiceScheduleForm({
                     <option value="">Оберіть послугу</option>
 
                     {services.map((service) => (
-                        <option
-                            key={service.id}
-                            value={service.id}
-                        >
+                        <option key={service.id} value={service.id}>
                             {service.title}
                         </option>
                     ))}
@@ -61,10 +63,7 @@ function AdminServiceScheduleForm({
                     <option value="">Оберіть центр</option>
 
                     {centres.map((centre) => (
-                        <option
-                            key={centre.id}
-                            value={centre.id}
-                        >
+                        <option key={centre.id} value={centre.id}>
                             {centre.address}
                         </option>
                     ))}
@@ -81,14 +80,16 @@ function AdminServiceScheduleForm({
                     name="slotId"
                     value={formData.slotId}
                     onChange={onChange}
+                    disabled={!formData.centreId}
                 >
-                    <option value="">Оберіть часовий слот</option>
+                    <option value="">
+                        {formData.centreId
+                            ? 'Оберіть часовий слот'
+                            : 'Спочатку оберіть центр'}
+                    </option>
 
                     {availableTimeSlots.map((slot) => (
-                        <option
-                            key={slot.id}
-                            value={slot.id}
-                        >
+                        <option key={slot.id} value={slot.id}>
                             {getSlotLabel(slot)}
                         </option>
                     ))}

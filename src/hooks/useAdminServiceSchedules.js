@@ -56,6 +56,7 @@ export function useAdminServiceSchedules() {
         setFormData((prev) => ({
             ...prev,
             [name]: value,
+            ...(name === 'centreId' ? { slotId: '' } : {}),
         }))
     }
 

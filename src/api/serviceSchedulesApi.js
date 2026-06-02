@@ -6,6 +6,21 @@ export const serviceSchedulesApi = {
         return response.data
     },
 
+    getAvailable: async (serviceId, centreId, date) => {
+        const response = await axiosClient.get(
+            '/ServiceSchedule/GetAvailable/available',
+            {
+                params: {
+                    serviceId,
+                    centreId,
+                    date,
+                },
+            }
+        )
+
+        return response.data
+    },
+
     create: async (data) => {
         const response = await axiosClient.post('/ServiceSchedule/Create', data)
         return response.data

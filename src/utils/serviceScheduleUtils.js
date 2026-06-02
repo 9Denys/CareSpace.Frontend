@@ -8,8 +8,31 @@ export function getSlotLabel(slot) {
     return `${slot.date} · ${slot.startTime}–${slot.endTime}`
 }
 
-export function getAvailableTimeSlots(timeSlots) {
-    return timeSlots.filter((slot) => slot.isAvailable)
+export function getAvailableTimeSlots(
+    timeSlots,
+    schedules,
+    selectedCentreId
+) {
+    if (!selectedCentreId) {
+        return []
+    }
+
+    return timeSlots.filter((slot) => {
+        const isSlotUsedInSelectedCentre = schedules.some((schedule) => {
+            const scheduleCentreId =
+                schedule.centreId || schedule.centre?.id
+
+            const scheduleSlotId =
+                schedule.slotId || schedule.slot?.id
+
+            return (
+                scheduleCentreId === selectedCentreId &&
+                scheduleSlotId === slot.id
+            )
+        })
+
+        return !isSlotUsedInSelectedCentre
+    })
 }
 
 export function getScheduleTitle(schedule) {

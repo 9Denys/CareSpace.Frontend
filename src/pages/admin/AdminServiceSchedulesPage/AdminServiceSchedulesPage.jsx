@@ -44,7 +44,7 @@ function AdminServiceSchedulesPage() {
                         </h1>
 
                         <p className="admin-service-schedules-page__subtitle">
-                            Створіть зв&apos;язок між послугою, центром та часовим слотом
+                            Створіть зв'язок між послугою, центром та часовим слотом
                         </p>
                     </div>
 
@@ -64,6 +64,7 @@ function AdminServiceSchedulesPage() {
                                 services={services}
                                 centres={centres}
                                 timeSlots={timeSlots}
+                                schedules={schedules}
                                 formData={formData}
                                 isFormValid={isFormValid}
                                 onChange={handleChange}

@@ -12,7 +12,6 @@ import { appointmentsApi } from '../../api/appointmentsApi'
 import { useBookingSchedules } from '../../hooks/useBookingSchedules'
 import {
     getAvailableDates,
-    getAvailableSchedules,
     getScheduleStartTime,
     getServiceTitle,
     getUniqueCentres,
@@ -32,9 +31,12 @@ function BookingPage() {
 
     const {
         schedules,
+        availableSchedules,
         isLoading,
+        isAvailableLoading,
         error,
         setError,
+        fetchAvailableSchedules,
     } = useBookingSchedules(id)
 
     const centres = useMemo(() => {
@@ -45,7 +47,7 @@ function BookingPage() {
         (centre) => centre.id === selectedCentreId
     )
 
-    const selectedSchedule = schedules.find(
+    const selectedSchedule = availableSchedules.find(
         (schedule) => schedule.id === selectedScheduleId
     )
 
@@ -58,14 +60,6 @@ function BookingPage() {
         return getAvailableDates(schedules, selectedCentreId)
     }, [schedules, selectedCentreId])
 
-    const availableSchedules = useMemo(() => {
-        return getAvailableSchedules(
-            schedules,
-            selectedCentreId,
-            selectedDate
-        )
-    }, [schedules, selectedCentreId, selectedDate])
-
     const handleCentreChange = (event) => {
         setSelectedCentreId(event.target.value)
         setSelectedDate('')
@@ -77,6 +71,8 @@ function BookingPage() {
         setSelectedDate(date)
         setSelectedTime('')
         setSelectedScheduleId('')
+
+        fetchAvailableSchedules(selectedCentreId, date)
     }
 
     const handleTimeChange = (schedule) => {
@@ -150,11 +146,17 @@ function BookingPage() {
                                 onDateChange={handleDateChange}
                             />
 
-                            <BookingTimeBlock
-                                availableSchedules={availableSchedules}
-                                selectedScheduleId={selectedScheduleId}
-                                onTimeChange={handleTimeChange}
-                            />
+                            {isAvailableLoading ? (
+                                <p className="booking-page__message">
+                                    Завантаження доступних слотів...
+                                </p>
+                            ) : (
+                                <BookingTimeBlock
+                                    availableSchedules={availableSchedules}
+                                    selectedScheduleId={selectedScheduleId}
+                                    onTimeChange={handleTimeChange}
+                                />
+                            )}
                         </div>
 
                         <BookingDetails
