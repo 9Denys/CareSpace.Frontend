@@ -24,8 +24,7 @@ function BookingSuccessPage() {
                     </h1>
 
                     <p className="booking-success-page__text">
-                        Ваш запис підтверджено. Деталі надіслано на вашу
-                        електронну пошту.
+                        Ваш запис підтверджено. Деталі надіслано в особистий кабінет.
                     </p>
 
                     <div className="booking-success-page__actions">
